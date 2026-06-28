@@ -1,30 +1,123 @@
-# Deadline Rescue AI (FocusForge)
+# Deadline Rescue AI
 
-Deadline Rescue AI (FocusForge) is a Vibe2Ship hackathon application for **Problem Statement 1: The Last-Minute Life Saver**. It helps a user sign in, connect Google Calendar, create a deadline-driven task, calculate real availability, generate a rescue plan, get Gemini-powered task breakdown and advice, and write focus blocks back to Google Calendar.
+> AI-powered productivity companion that rescues tight deadlines by intelligently scheduling focus blocks around your existing calendar commitments.
 
-## What It Does
+🌐 **Live Demo:** [Your Cloud Run URL Here]
 
-```text
-User signs in with email/password, Google, or GitHub
-  -> connects Google Calendar
-  -> creates task with deadline and effort
-  -> server saves task in Firestore
-  -> Google Calendar FreeBusy provides real busy slots
-  -> planner calculates risk, priority, and focus blocks
-  -> Gemini generates task breakdown and rescue advice
-  -> user can write focus blocks back to Google Calendar
-```
+🎯 **Built for:** Google Cloud Competition - Problem Statement: Last-Minute Deadline Rescue
 
-## Tech Stack
+## 🎯 Problem Statement
 
-- Next.js 16 App Router
-- React 19
-- Tailwind CSS 4
-- Firebase Admin SDK / Firestore
-- App-owned auth with email/password, Google OAuth, and GitHub OAuth
-- Google Calendar API
-- Gemini API via `@google/genai`
-- Google Cloud Run
+Professionals and students struggle with looming deadlines when their calendars are already packed with meetings and commitments. They need intelligent help to:
+- Break down complex tasks into manageable subtasks
+- Find available time slots in fragmented schedules
+- Schedule optimal focus blocks based on task complexity
+- Get realistic risk assessments for deadline feasibility
+
+## 💡 Solution Overview
+
+Deadline Rescue AI combines calendar intelligence with AI-powered task analysis to transform deadline anxiety into actionable plans:
+
+1. **Analyzes Google Calendar** to find real available time windows
+2. **Uses Gemini AI** to break down complex tasks with effort estimates
+3. **Generates intelligent focus blocks** (30min - 4h) based on complexity
+4. **Provides risk analysis** (Low/Medium/High) with rescue advice
+5. **Integrates with JIRA/Confluence** for workflow management
+
+## ✨ Key Features
+
+### 🤖 AI-Powered Intelligence
+- **Task Breakdown:** Gemini AI creates detailed subtask breakdowns with time estimates
+- **Smart Scheduling:** Adaptive focus block duration based on:
+  - Task complexity scoring
+  - Available calendar windows
+  - Research-backed optimal durations (ultradian rhythm: 90min, deep work: 2.5h)
+- **Risk Assessment:** Real-time deadline feasibility analysis with personalized advice
+
+### 📅 Calendar Integration
+- **Google Calendar Sync:** OAuth 2.0 integration
+- **Availability Detection:** Smart algorithm finds free time windows
+- **Focus Block Creation:** One-click addition to Google Calendar
+- **Conflict Avoidance:** Respects existing meetings
+
+### 📊 Task Management
+- **Task History:** Track all tasks with status management
+- **Status Updates:** In Progress, Done, Blocked, Cancelled
+- **Overdue Detection:** Visual indicators for past-deadline tasks
+- **Filtering & Sorting:** By status, deadline, priority, creation date
+
+### 🔗 Atlassian Integration
+- **OAuth 2.0 Connection:** Secure JIRA and Confluence access
+- **JIRA Export:** Create tasks with rescue plan, risk analysis, focus blocks
+- **Confluence Export:** Generate formatted pages with:
+  - Color-coded risk panels
+  - Tabular task overview
+  - Scheduled focus blocks
+  - AI insights
+- **Multi-site Support:** Multiple Atlassian cloud instances
+
+### 🎨 Modern UI/UX
+- **Responsive Design:** Desktop, tablet, mobile
+- **Real-time Status:** Auth, Calendar, Atlassian indicators
+- **Slide-out Task Drawer:** Quick access to history
+- **Smart Error Handling:** User-friendly messages with retry logic
+
+## 🛠️ Technologies Used
+
+### Frontend
+- **Next.js 16** - React framework with App Router
+- **React 19** - UI component library
+- **TypeScript** - Type-safe development
+- **Tailwind CSS 4** - Utility-first styling
+
+### Backend
+- **Node.js 22** - Runtime environment
+- **Next.js API Routes** - Serverless functions
+- **Firebase Admin SDK** - Server-side Firebase operations
+
+### AI & APIs
+- **Google Gemini AI** (gemini-2.0-flash-exp) - Task breakdown and advice
+- **Google Calendar API** - Calendar integration
+- **Atlassian REST API v3** - JIRA and Confluence
+
+### Database & Auth
+- **Firebase Firestore** - NoSQL database
+- **Firebase Authentication** - User management
+- **OAuth 2.0** - Google, GitHub, Atlassian auth
+
+### Infrastructure
+- **Google Cloud Run** - Containerized deployment
+- **Docker** - Application containerization
+- **Cloud Build** - CI/CD pipeline
+
+## 🎯 Google Technologies Utilized
+
+1. **Google Gemini AI API**
+   - Task complexity analysis
+   - Intelligent subtask breakdown
+   - Personalized rescue advice
+   - Retry logic with exponential backoff
+
+2. **Google Cloud Platform**
+   - **Cloud Run:** Serverless container deployment
+   - **Cloud Build:** Automated build pipeline
+   - **Artifact Registry:** Container image storage
+   - **IAM:** Security and access control
+
+3. **Firebase**
+   - **Firestore:** Real-time NoSQL database
+   - **Firebase Admin SDK:** Server-side operations
+   - **Firebase Authentication:** User management
+
+4. **Google Calendar API**
+   - OAuth 2.0 authentication
+   - FreeBusy query for availability
+   - Event creation for focus blocks
+
+5. **Google Cloud Console**
+   - OAuth credential management
+   - API key management
+   - Service account configuration
 
 ## Architecture
 
