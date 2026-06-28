@@ -1,0 +1,11 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lightning bolt representing "rescue" -->
+  <rect width="64" height="64" rx="12" fill="url(#gradient)"/>
+  <path d="M35 10L20 35H30L28 54L43 29H33L35 10Z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10B981"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+</svg>
